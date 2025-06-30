@@ -1,0 +1,43 @@
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&family=Rancho&display=swap');
+
+/* Global styles */
+body {
+    background-color: green; /* add image later */
+    font-family: "Comic Neue", cursive;
+    text-align: center;
+    min-height: 100%;
+    position: relative;
+}
+
+/* Game container */
+.game-container {
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5%;
+    background-color: white;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+h1 {
+    font-family: "Rancho", cursive;
+    font-size: 3rem;
+    padding-top: 2.5%;
+    margin: 0;
+    line-height: 2.5rem;
+}
+
+.intro-area {
+    display: block;
+    padding-top: 0;
+    padding-bottom: 2%;
+}
+
+/* only start screen displayed until button click triggers js */
+.game-container .game-area, .game-container .score-area {
+    /* display: none; */
+}
+
+/* Game and score areas */

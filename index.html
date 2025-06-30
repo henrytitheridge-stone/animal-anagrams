@@ -17,18 +17,18 @@
     <div class="game-container">
 
         <h1>Animal Anagrams</h1>
-
+        <hr>
         <div class="intro-area">
             <p>Unscramble the words to find as many animals as you can!</p>
             <button data-type="start" class="btn">Start Game</button>
         </div>
 
         <div class="game-area">
-            <div class="word-clue">
-                <p class="word"></p>
-                <p class="clue">Clue: <span></span></p>
-            </div>
+            <p id="word">animal</p>
+            <p id="clue"><strong>Clue: </strong><span>Placeholder text</span></p>
+
             <input id="answer-box" type="text" placeholder="Type the animal name here">
+
             <div class="buttons">
                 <button data-type="submit" class="btn">Check answer</button>
                 <button data-type="pass" class="btn">Pass</button>
@@ -36,7 +36,7 @@
         </div>
 
         <div class="score-area">
-            <p>Score: <span>0</span>/10</p>
+            <p><strong>Score: </strong><span><strong>0</strong></span>/10</p>
         </div>
     </div>
     

@@ -1,43 +1,56 @@
 /* Google fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue&family=Rancho&display=swap');
 
-/* Global styles */
 body {
+    display: flex;
     background-color: green; /* add image later */
     font-family: "Comic Neue", cursive;
-    text-align: center;
-    min-height: 100%;
-    position: relative;
+    align-items: center;
+    justify-content:center;
+    min-height: 100vh;
 }
 
 /* Game container */
 .game-container {
-    width: 75%;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 5%;
+    width: 350px;
     background-color: white;
-    padding-left: 1%;
-    padding-right: 1%;
 }
 
 h1 {
     font-family: "Rancho", cursive;
-    font-size: 3rem;
-    padding-top: 2.5%;
+    font-size: 38px;
+    text-align: center;
+    padding-top: 8px;
     margin: 0;
-    line-height: 2.5rem;
 }
 
 .intro-area {
-    display: block;
-    padding-top: 0;
-    padding-bottom: 2%;
+    font-size: 18px;
+    text-align: center;
+    margin: 0 10px 30px;
 }
 
-/* only start screen displayed until button click triggers js */
+/* only intro screen displayed until button-click triggers js */
 .game-container .game-area, .game-container .score-area {
     /* display: none; */
+    font-size: 18px;
+    margin: 0 10px 15px; 
 }
 
-/* Game and score areas */
+#word {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 18px;
+    text-indent: 18px;
+}
+
+/* Buttons */
+.btn {
+    background-color: green;
+    color: white;
+    font-family: "Comic Neue", cursive;
+    font-size: 15px;
+    
+}
+

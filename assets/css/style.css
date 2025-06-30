@@ -12,7 +12,7 @@ body {
 
 /* Game container */
 .game-container {
-    width: 350px;
+    width: 415px;
     background-color: white;
 }
 
@@ -32,9 +32,9 @@ h1 {
 
 /* only intro screen displayed until button-click triggers js */
 .game-container .game-area, .game-container .score-area {
-    display: none;
+    /* display: none; */
     font-size: 18px;
-    margin: 0 10px 15px; 
+    text-align: center; 
 }
 
 #word {
@@ -47,9 +47,11 @@ h1 {
 
 input {
     font-size: 20px;
+    width: 75%;
     height: 50px;
     padding: 0 12px;
-    margin: 0 25px;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Buttons */
@@ -57,7 +59,7 @@ input {
     background-color: green;
     color: white;
     font-family: "Comic Neue", cursive;
-    font-size: 15px;
+    font-size: 18px;
     padding: 5px 10px;
 }
 
@@ -68,5 +70,33 @@ input {
 .buttons {
     display: flex;
     justify-content: space-between;
-    margin: 8px 95px 0 55px;
+    margin: 8px 110px 0 100px;
+}
+
+/* Media queries */
+
+/* Media query for small phones (up to 425px) */
+@media (max-width: 425px) {
+    .game-container {
+        width: 310px;
+    }
+
+    .buttons {
+        display: flex;
+    justify-content: space-between;
+    margin: 8px 60px 0 45px;
+    }
+}
+
+/* Media query for tablets and larger screens (from 768px and up) */
+@media screen and (min-width: 768px) {
+    .game-container {
+        width: 750px
+    }
+
+    .buttons {
+        display: flex;
+    justify-content: space-between;
+    margin: 15px 280px 0 270px;
+    }
 }

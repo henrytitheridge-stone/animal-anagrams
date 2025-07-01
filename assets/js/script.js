@@ -1,39 +1,78 @@
-const words = [
+const animals = [
     {
-        word: "elephant",
+        name: "elephant",
         clue: "The biggest land animal in the world."
     },
     {
-        word: "lion",
+        name: "lion",
         clue: "The king of the big cats."
     },
     {
-        word: "cheetah",
+        name: "cheetah",
         clue: "The fastest land animal in the world."
     },
     {
-        word: "giraffe",
+        name: "giraffe",
         clue: "An animal with a long neck for reaching leaves."
     },
     {
-        word: "penguin",
+        name: "penguin",
         clue: "A flightless bird from Antarctica."
     },
     {
-        word: "spider",
+        name: "spider",
         clue: "A creepy-crawly with eight legs."
     },
     {
-        word: "dolphin",
+        name: "dolphin",
         clue: "A super speedy, high-jumping marine mammal."
     },
     {
-        word: "gorilla",
+        name: "gorilla",
         clue: "A big, strong forest primate."
     },
     {
-        word: "crocodile",
+        name: "crocodile",
         clue: "A scaly, snappy river reptile."
     }
 ];
 
+// document.addEventListener("DOMContentLoaded", function () {
+    
+//     let startGame = document.getElementById("start");
+//     startGame.addEventListener("click", displayGame());
+    
+// });
+
+// function displayGame() {
+    
+//     let introArea = document.getElementById("intro-area");
+//     introArea.classList.add("hidden");
+
+//     let gameArea = document.getElementById("game-area");
+//     gameArea.classList.remove("hidden");
+
+//     runGame();
+    
+// }
+
+function runGame() {
+    
+    let animal = animals[Math.floor(Math.random() * animals.length)];
+    let animalLetters = animal.name.split("");
+    for (let i = animalLetters.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [animalLetters[i], animalLetters[j]] = [animalLetters[j], animalLetters[i]];
+    }
+    console.log(animalLetters, animal.name);
+
+};
+runGame();
+
+function checkAnswer() {
+
+}
+
+function incrementScore() {
+
+}

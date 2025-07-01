@@ -8,6 +8,7 @@ body {
     align-items: center;
     justify-content:center;
     min-height: 100vh;
+    margin: 0;
 }
 
 /* Game container */
@@ -25,6 +26,7 @@ h1 {
 }
 
 .intro-area {
+    display: none;
     font-size: 18px;
     text-align: center;
     margin: 0 10px 30px;
@@ -38,15 +40,16 @@ h1 {
 }
 
 #word {
-    font-size: 30px;
+    font-size: 32px;
     font-weight: bold;
     text-align: center;
-    letter-spacing: 18px;
-    text-indent: 18px;
+    letter-spacing: 28px;
+    text-indent: 28px;
 }
 
 input {
-    font-size: 20px;
+    font-family: "Rancho", cursive;
+    font-size: 30px;
     width: 75%;
     height: 50px;
     padding: 0 12px;
@@ -81,6 +84,12 @@ input {
         width: 310px;
     }
 
+    #word {
+        font-size: 24px;
+        letter-spacing: 20px;
+        text-indent: 20px;
+    }
+
     .buttons {
         display: flex;
     justify-content: space-between;
@@ -92,6 +101,12 @@ input {
 @media screen and (min-width: 768px) {
     .game-container {
         width: 750px
+    }
+
+    #word {
+        font-size: 48px;
+        letter-spacing: 35px;
+        text-indent: 35px;
     }
 
     .buttons {

@@ -64,6 +64,13 @@ function runGame() {
         let j = Math.floor(Math.random() * (i + 1));
         [animalLetters[i], animalLetters[j]] = [animalLetters[j], animalLetters[i]];
     }
+
+    let anagram = document.getElementById("name");
+    anagram.innerText = animalLetters.join("");
+
+    let clue = document.querySelector(".clue span");
+    clue.innerText = animal.clue;
+
     console.log(animalLetters, animal.name);
 
 };

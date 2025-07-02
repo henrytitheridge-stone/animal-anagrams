@@ -1,4 +1,4 @@
-const animals = [
+let animals = [
     {
         name: "elephant",
         clue: "The biggest land animal in the world."
@@ -37,13 +37,6 @@ const animals = [
     }
 ];
 
-// document.addEventListener("DOMContentLoaded", function () {
-    
-//     let startGame = document.getElementById("start");
-//     startGame.addEventListener("click", displayGame());
-    
-// });
-
 function displayGame() {
     
     let introArea = document.querySelector(".intro-area");
@@ -54,29 +47,39 @@ function displayGame() {
 
     runGame();
     
-}
+};
 
 function runGame() {
+
+    document.getElementById("answer-box").value = "";
+    document.getElementById("answer-box").focus();
     
-    let animal = animals[Math.floor(Math.random() * animals.length)];
-    let animalLetters = animal.name.split("");
-    for (let i = animalLetters.length - 1; i > 0; i--) {
+    randomAnimal = animals[Math.floor(Math.random() * animals.length)];
+    let animalLetters = randomAnimal.name.split("");
+        for (let i = animalLetters.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
         [animalLetters[i], animalLetters[j]] = [animalLetters[j], animalLetters[i]];
     }
 
-    correctAnswer = animal.name;
+    correctAnswer = randomAnimal.name;
 
     let anagram = document.getElementById("name");
     anagram.innerText = animalLetters.join("");
 
     let clue = document.querySelector(".clue span");
-    clue.innerText = animal.clue;
+    clue.innerText = randomAnimal.clue;
 
 };
 
 const passBtn = document.getElementById("pass");
-passBtn.addEventListener("click", runGame);
+passBtn.addEventListener("click", function() {
+    let randomIndex = animals.indexOf(randomAnimal);
+    if (animals.length > 0) {
+        animals.splice(randomIndex, 1);
+    }
+    console.log(animals);
+    runGame();
+});
 
 const checkBtn = document.getElementById("submit");
 checkBtn.addEventListener("click", checkAnswer);
@@ -93,13 +96,23 @@ function checkAnswer() {
         alert(`Oops! The answer was ${correctAnswer}.`)
     }
 
+    let randomIndex = animals.indexOf(randomAnimal);
+    if (animals.length > 0) {
+        animals.splice(randomIndex, 1);
+    } 
+    // else {
+    //     endGame();
+    // }
+    
+    console.log(animals);
+
     runGame();
 
-}
+};
 
 function incrementScore() {
 
     let runningScore = parseInt(document.getElementById("score").innerText);
     document.getElementById("score").innerText = ++runningScore;
 
-}
+};

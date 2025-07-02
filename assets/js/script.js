@@ -88,7 +88,7 @@ function checkAnswer() {
     
     if (userAnswer === correctAnswer) {
         alert("Well done!");
-        /* incrementScore(); */
+        incrementScore();
     } else {
         alert(`Oops! The answer was ${correctAnswer}.`)
     }
@@ -98,5 +98,8 @@ function checkAnswer() {
 }
 
 function incrementScore() {
+
+    let runningScore = parseInt(document.getElementById("score").innerText);
+    document.getElementById("score").innerText = ++runningScore;
 
 }

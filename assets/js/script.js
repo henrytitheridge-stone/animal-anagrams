@@ -38,6 +38,32 @@ let animals = [
     }
 ];
 
+// Buttons
+
+document.addEventListener("DOMContentLoaded", function() {
+    let startBtn = document.getElementById("start");
+    startBtn.addEventListener("click", displayGame);
+
+    const checkBtn = document.getElementById("submit");
+    checkBtn.addEventListener("click", checkAnswer);
+
+});
+
+// Pass button to show the correct answer and skip to the next anagram
+const passBtn = document.getElementById("pass");
+passBtn.addEventListener("click", function() {
+    let randomIndex = animals.indexOf(randomAnimal);
+    if (animals.length > 0) {
+        animals.splice(randomIndex, 1);
+    }
+    alert(`Oops! The answer was ${correctAnswer}.`)
+    console.log(animals);
+    runGame();
+});
+
+const checkBtn = document.getElementById("submit");
+checkBtn.addEventListener("click", checkAnswer);
+
 // Hide intro screen and begin game
 function displayGame() {
     
@@ -76,21 +102,6 @@ function runGame() {
     clue.innerText = randomAnimal.clue; // display clue for users
 
 };
-
-// Pass button to show the correct answer and skip to the next anagram
-const passBtn = document.getElementById("pass");
-passBtn.addEventListener("click", function() {
-    let randomIndex = animals.indexOf(randomAnimal);
-    if (animals.length > 0) {
-        animals.splice(randomIndex, 1);
-    }
-    alert(`Oops! The answer was ${correctAnswer}.`)
-    console.log(animals);
-    runGame();
-});
-
-const checkBtn = document.getElementById("submit");
-checkBtn.addEventListener("click", checkAnswer);
 
 // Checks the user's attempt against the correctAnswer from the runGame function
 function checkAnswer() {
@@ -139,9 +150,9 @@ function endGame() {
 
     let startBtn = document.getElementById("start");
     startBtn.innerText = "Play again";
+    startBtn.removeEventListener("click", displayGame)
     startBtn.addEventListener("click", function() {
         location.reload()
     });
-    
     
 }

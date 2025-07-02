@@ -56,9 +56,6 @@ function displayGame() {
     
 }
 
-// const passBtn = document.getElementById("pass");
-// passBtn.addEventListener("click", runGame)
-
 function runGame() {
     
     let animal = animals[Math.floor(Math.random() * animals.length)];
@@ -77,8 +74,16 @@ function runGame() {
 };
 /* runGame(); */
 
+const passBtn = document.getElementById("pass");
+passBtn.addEventListener("click", runGame);
+
+const checkBtn = document.getElementById("submit");
+checkBtn.addEventListener("click", checkAnswer);
+
 
 function checkAnswer() {
+
+    
 
 }
 

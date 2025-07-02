@@ -65,6 +65,8 @@ function runGame() {
         [animalLetters[i], animalLetters[j]] = [animalLetters[j], animalLetters[i]];
     }
 
+    correctAnswer = animal.name;
+
     let anagram = document.getElementById("name");
     anagram.innerText = animalLetters.join("");
 
@@ -72,7 +74,6 @@ function runGame() {
     clue.innerText = animal.clue;
 
 };
-/* runGame(); */
 
 const passBtn = document.getElementById("pass");
 passBtn.addEventListener("click", runGame);
@@ -83,7 +84,16 @@ checkBtn.addEventListener("click", checkAnswer);
 
 function checkAnswer() {
 
+    let userAnswer = document.getElementById("answer-box").value;
     
+    if (userAnswer === correctAnswer) {
+        alert("Well done!");
+        /* incrementScore(); */
+    } else {
+        alert(`Oops! The answer was ${correctAnswer}.`)
+    }
+
+    runGame();
 
 }
 

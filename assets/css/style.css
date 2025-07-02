@@ -25,20 +25,20 @@ h1 {
     margin: 0;
 }
 
-#intro-area {
+.intro-area {
     font-size: 18px;
     text-align: center;
     margin: 0 10px 30px;
-    display: none; /* to allow work on game area */
+    /* display: none; */
 }
 
 /* only intro screen displayed until button-click triggers js */
 
-/* .hidden {
+.hidden {
     display: none;
-} */
+}
 
-#game-area {
+.game-area {
     font-size: 18px;
     text-align: center; 
 }

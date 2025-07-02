@@ -18,12 +18,14 @@
 
         <h1>Animal Anagrams</h1>
         <hr>
-        <div id="intro-area">
+        <div class="intro-area">
             <p>Unscramble the words to find as many animals as you can!</p>
+            <div onclick="displayGame()">
             <button data-type="start" class="btn" id="start">Start Game</button>
+            </div>
         </div>
 
-        <div id="game-area" class="hidden">
+        <div class="game-area hidden">
             <p id="name"></p>
             <p class="clue"><strong>Clue: </strong><span></span></p>
 
@@ -31,7 +33,7 @@
 
             <div class="buttons">
                 <button data-type="submit" class="btn">Check answer</button>
-                <button data-type="pass" class="btn">Pass</button>
+                <button id="pass" class="btn">Pass</button>
             </div>
 
             <div>

@@ -44,17 +44,20 @@ const animals = [
     
 // });
 
-// function displayGame() {
+function displayGame() {
     
-//     let introArea = document.getElementById("intro-area");
-//     introArea.classList.add("hidden");
+    let introArea = document.querySelector(".intro-area");
+    introArea.classList.add("hidden");
 
-//     let gameArea = document.getElementById("game-area");
-//     gameArea.classList.remove("hidden");
+    let gameArea = document.querySelector(".game-area");
+    gameArea.classList.remove("hidden");
 
-//     runGame();
+    runGame();
     
-// }
+}
+
+// const passBtn = document.getElementById("pass");
+// passBtn.addEventListener("click", runGame)
 
 function runGame() {
     
@@ -71,10 +74,9 @@ function runGame() {
     let clue = document.querySelector(".clue span");
     clue.innerText = animal.clue;
 
-    console.log(animalLetters, animal.name);
-
 };
-runGame();
+/* runGame(); */
+
 
 function checkAnswer() {
 

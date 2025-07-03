@@ -35,6 +35,10 @@ let animals = [
     {
         name: "crocodile",
         clue: "A scaly, snappy river reptile."
+    },
+    {
+        name: "rhino",
+        clue: "A powerful charger with a horn on its nose."
     }
 ];
 
@@ -87,7 +91,7 @@ function runGame() {
 const checkBtn = document.getElementById("submit");
 checkBtn.addEventListener("click", checkAnswer);
 
-// Pass button to show the correct answer and skip to the next anagram
+// Pass button to show the correct answer and skip to the next anagram or end the game
 const passBtn = document.getElementById("pass");
 passBtn.addEventListener("click", function() {
     let randomIndex = animals.indexOf(randomAnimal);

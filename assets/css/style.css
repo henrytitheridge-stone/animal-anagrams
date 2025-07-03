@@ -29,11 +29,9 @@ h1 {
     font-size: 18px;
     text-align: center;
     margin: 0 10px 30px;
-    /* display: none; */
 }
 
 /* only intro screen displayed until button-click triggers js */
-
 .hidden {
     display: none;
 }

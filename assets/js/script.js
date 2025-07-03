@@ -87,9 +87,17 @@ function runGame() {
 
 };
 
-// Check answer button
+// checkAnswer event listeners
 const checkBtn = document.getElementById("submit");
 checkBtn.addEventListener("click", checkAnswer);
+
+document.getElementById("answer-box").addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {
+        checkAnswer();
+    }
+});
+
+
 
 // Pass button to show the correct answer and skip to the next anagram or end the game
 const passBtn = document.getElementById("pass");
@@ -105,15 +113,14 @@ passBtn.addEventListener("click", function() {
     }
 });
 
-// Checks the user's attempt against the correctAnswer from the runGame function
+// Checks the user's attempt against the name of the random animal generated in the runGame function
 function checkAnswer() {
 
     let userAnswer = document.getElementById("answer-box").value;
-    // let correctAnswer = runGame()[1];
     
-    if (userAnswer === randomAnimal.name) { // displays right or wrong message for the user
+    if (userAnswer.toLowerCase() === randomAnimal.name) { // displays right or wrong message for the user
         alert("Well done! That was the right answer!");
-        incrementScore();
+        incrementScore(); // adds one point for a correct answer
     } else {
         alert(`Oops! The answer was ${randomAnimal.name}.`)
     }
@@ -148,12 +155,12 @@ function endGame() {
     gameArea.classList.add("hidden");
 
     let runningScore = parseInt(document.getElementById("score").innerText);
-    document.getElementById("message").innerText = `Great effort! Your score was ${runningScore}/10`;
+    document.getElementById("message").innerText = `Great effort! Your score was ${runningScore}/10.`;
 
     // Adjusts button text to "Play again" and reloads intro screen
     let startBtn = document.getElementById("start");
     startBtn.innerText = "Play again";
-    startBtn.removeEventListener("click", displayGame) // removes jumpy game reload
+    startBtn.removeEventListener("click", displayGame) // removes jumpy, premature game reload
     startBtn.addEventListener("click", function() {
         location.reload()
     });

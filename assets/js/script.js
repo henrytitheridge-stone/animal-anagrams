@@ -160,7 +160,7 @@ function endGame() {
     // Adjusts button text to "Play again" and reloads intro screen
     let startBtn = document.getElementById("start");
     startBtn.innerText = "Play again";
-    startBtn.removeEventListener("click", displayGame); // removes premature game reload
+    startBtn.removeEventListener("click", displayGame); // removes premature game reload attempt
     startBtn.addEventListener("click", function() {
         location.reload();
     });

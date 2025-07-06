@@ -4,7 +4,7 @@
 body {
     display: flex;
     /* background-color: green; /* add image later */
-    background: url(../images/4oxq_taaz_210810.jpg);
+    background: url(../images/background-image.jpg);
     background-size: cover;
     font-family: "Comic Neue", cursive;
     align-items: center;

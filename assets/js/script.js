@@ -145,7 +145,7 @@ function incrementScore() {
 
 }
 
-// Display user's final score and option to start again
+// Display user's final score, message and option to start again
 function endGame() {
 
     let introArea = document.querySelector(".intro-area");
@@ -155,7 +155,16 @@ function endGame() {
     gameArea.classList.add("hidden");
 
     let runningScore = parseInt(document.getElementById("score").innerText);
-    document.getElementById("message").innerText = `Great effort! Your score was ${runningScore}/10.`;
+    let message = document.getElementById("message");
+
+    // Set score bands for feedback message
+    if (runningScore <= 5) {
+        message.innerText = `Good try! Your score was ${runningScore}/10, a bit lost in the wild.`;
+    } else if (runningScore <= 8) {
+        message.innerText = `Great effort! Your score was ${runningScore}/10, a super safari!`;
+    } else if (runningScore <=10) {
+        message.innerText = `Incredible! Your score was ${runningScore}/10, top of the food chain!`;
+    }
 
     // Adjusts button text to "Play again" and reloads intro screen
     let startBtn = document.getElementById("start");

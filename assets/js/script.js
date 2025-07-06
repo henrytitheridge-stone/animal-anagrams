@@ -161,7 +161,7 @@ function endGame() {
     if (runningScore <= 5) {
         message.innerText = `Good try! Your score was ${runningScore}/10, a bit lost in the wild.`;
     } else if (runningScore <= 8) {
-        message.innerText = `Great effort! Your score was ${runningScore}/10, a super safari!`;
+        message.innerText = `Great effort! Your score was ${runningScore}/10, a succesful safari!`;
     } else if (runningScore <=10) {
         message.innerText = `Incredible! Your score was ${runningScore}/10, top of the food chain!`;
     }

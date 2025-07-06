@@ -63,7 +63,7 @@ input {
 
 /* Buttons */
 .btn {
-    background-color: green;
+    background-color: #235810; /* dark moss green */
     color: white;
     font-family: "Comic Neue", cursive;
     font-size: 18px;

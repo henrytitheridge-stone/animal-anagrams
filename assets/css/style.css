@@ -3,7 +3,6 @@
 
 body {
     display: flex;
-    /* background-color: green; /* add image later */
     background: url(../images/background-image.jpg);
     background-size: cover;
     font-family: "Comic Neue", cursive;
@@ -100,19 +99,19 @@ input {
     }
 
     input {
-    font-family: "Rancho", cursive;
-    font-size: 24px;
-    width: 75%;
-    height: 40px;
-    padding: 0 10px;
-    display: block;
-    margin: 0 auto;
+        font-family: "Rancho", cursive;
+        font-size: 24px;
+        width: 75%;
+        height: 40px;
+        padding: 0 10px;
+        display: block;
+        margin: 0 auto;
 }
 
     .buttons {
         display: flex;
-    justify-content: space-between;
-    margin: 8px 60px 0 45px;
+        justify-content: space-between;
+        margin: 8px 60px 0 45px;
     }
 }
 
@@ -130,7 +129,7 @@ input {
 
     .buttons {
         display: flex;
-    justify-content: space-between;
-    margin: 15px 280px 0 270px;
+        justify-content: space-between;
+        margin: 15px 280px 0 270px;
     }
 }

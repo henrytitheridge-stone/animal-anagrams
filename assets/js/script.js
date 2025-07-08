@@ -116,7 +116,7 @@ passBtn.addEventListener("click", function() {
     if (animals.length > 1) {
         animals.splice(randomIndex, 1);
         feedbackMessage.innerText = `Oops! The answer was ${randomAnimal.name}.`;
-        setTimeout(() => {
+        setTimeout(() => { // hide feedback and run next anagram/end game after 3s
             feedbackMessage.innerText = "";
             runGame();
         }, 3500);
@@ -147,7 +147,7 @@ function checkAnswer() {
     let randomIndex = animals.indexOf(randomAnimal);
     if (animals.length > 1) {
         animals.splice(randomIndex, 1);
-        setTimeout(() => {
+        setTimeout(() => { // hide feedback and run next anagram/end game after 3s
             feedbackMessage.innerText = "";
             runGame();
         }, 3500);

@@ -72,7 +72,7 @@ let randomAnimal;
  */ 
 function runGame() {
 
-    document.getElementById("answer-box").value = ""; // clear and select input field for each go
+    document.getElementById("answer-box").value = ""; // always clear and select input field 
     document.getElementById("answer-box").focus(); 
     
 // Choose random animal from array and split its name into an array letter by letter
@@ -183,7 +183,7 @@ function endGame() {
     let runningScore = parseInt(document.getElementById("score").innerText);
     let message = document.getElementById("message");
 
-    // Set score bands for feedback message
+    // Set score bands for final message
     if (runningScore <= 5) {
         message.innerText = `Good try! Your score was ${runningScore}/10, a bit lost in the wild.`;
     } else if (runningScore <= 8) {
@@ -195,7 +195,7 @@ function endGame() {
     // Adjusts button text to "Play again" and reloads intro screen
     let startBtn = document.getElementById("start");
     startBtn.innerText = "Play again";
-    startBtn.removeEventListener("click", displayGame); // removes premature game reload attempt
+    startBtn.removeEventListener("click", displayGame); // avoids premature game reload
     startBtn.addEventListener("click", function() {
         location.reload();
     });

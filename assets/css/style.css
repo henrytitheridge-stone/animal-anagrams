@@ -63,6 +63,7 @@ input {
 
 #feedback {
     margin:0 0 8px 0;
+    font-weight: bold;
 }
 
 .score p {
